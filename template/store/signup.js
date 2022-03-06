@@ -27,6 +27,42 @@ export const state = () => ({
     {
       name: "Mot de passe"
     },
-  ]
+  ],
+  users: [],
+  username: '',
+  email: '',
+  fullName: '',
+  password: '',
+  picture: ''
 
 })
+
+
+export const getters = {
+  username: (state) => state.username,
+  email: (state) => state.email,
+  fullName: (state) => state.fullName,
+  password: (state) => state.password,
+  picture: (state) => state.picture,
+  users: (state) => state.users
+}
+export const mutations = {
+  SETUSERNAME(state, value) {
+    state.username = value
+  },
+  SETEMAIL(state, value) {
+    state.email = value
+  },
+  SETFULLNAME(state, value) {
+    state.fullName = value
+  },
+  SETPASSWORD(state, value) {
+    state.password = value
+  },
+  SETPICTURE(state, value) {
+    state.picture = value
+  },
+  SIGNUP(state, payload) {
+    state.users = [{ username: payload.username, email: payload.email, fullName: payload.fullName, password: payload.password, picture: payload.picture }, ...state.users]
+  },
+}
