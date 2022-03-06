@@ -42,13 +42,12 @@
 </template>
 
 <script>
-import { RECENTE } from '../constants/index/recente'
 export default {
   name: 'RecenteAnnonce',
-  data() {
-    return {
-      recentes: RECENTE,
-    }
+  computed: {
+    recentes() {
+      return this.$store.state.recentes.RECENTE
+    },
   },
 }
 </script>
