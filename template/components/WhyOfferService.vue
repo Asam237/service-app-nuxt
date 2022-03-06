@@ -65,15 +65,18 @@
 </template>
 
 <script>
-import { WHY_OFFER } from '../constants/index/why_offer'
 export default {
   name: 'WhyOfferServiceComponent',
-  data() {
-    return {
-      title: WHY_OFFER[0].title,
-      content: WHY_OFFER[1],
-      btn: WHY_OFFER[2].btn,
-    }
+  computed: {
+    title() {
+      return this.$store.state.why_offer.WHY_OFFER[0].title
+    },
+    content() {
+      return this.$store.state.why_offer.WHY_OFFER[1]
+    },
+    btn() {
+      return this.$store.state.why_offer.WHY_OFFER[2].btn
+    },
   },
 }
 </script>
