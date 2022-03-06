@@ -45,14 +45,15 @@
 </template>
 
 <script>
-import { FOOTER, FOOTER_LINK } from '../constants/index/footer'
 export default {
   name: 'FooterComponent',
-  data() {
-    return {
-      texts: FOOTER,
-      links: FOOTER_LINK,
-    }
+  computed: {
+    texts() {
+      return this.$store.state.footer.FOOTER
+    },
+    links() {
+      return this.$store.state.footer.FOOTER_LINK
+    },
   },
 }
 </script>
