@@ -55,14 +55,15 @@
 </template>
 
 <script>
-import { ANNONCES } from '../constants/index/annonce'
 export default {
   name: 'AnnonceComponent',
-  data() {
-    return {
-      title: ANNONCES.title,
-      subTitle: ANNONCES.subTitle,
-    }
+  computed: {
+    title() {
+      return this.$store.state.annonces.annonces.title
+    },
+    subTitle() {
+      return this.$store.state.annonces.annonces.subTitle
+    },
   },
 }
 </script>
