@@ -97,7 +97,7 @@
       >
         <button class="outline-none mobile-menu-button">
           <svg
-            class="w-6 h-6 text-white hover:text-green-500"
+            class="w-6 h-6 text-white hover:text-red-600"
             x-show="!showMenu"
             fill="none"
             stroke-linecap="round"
@@ -111,12 +111,42 @@
         </button>
       </div>
     </div>
+    <div class="hidden mobile-menu">
+      <ul
+        v-for="(item, index) in headerLinks"
+        :key="index"
+        x-show="!showMenu"
+        @click="setID = item.link"
+      >
+        <li>
+          <a
+            :href="item.link"
+            :class="`
+                block
+                text-sm
+                px-2
+                py-4
+                hover:bg-red-600
+                transition
+                duration-300
+                ${setID === item.link ? 'bg-red-600' : ''}
+                `"
+            >{{ item.name }}</a
+          >
+        </li>
+      </ul>
+    </div>
   </header>
 </template>
 
 <script>
 export default {
   name: 'HeaderComponent',
+  data() {
+    return {
+      setID: 'Immobilier',
+    }
+  },
   computed: {
     headerIcons() {
       return this.$store.state.header.headerIcons
@@ -127,6 +157,14 @@ export default {
     imgHome() {
       return this.$store.state.header.imgHome
     },
+  },
+  mounted() {
+    const btn = document.querySelector('button.mobile-menu-button')
+    const menu = document.querySelector('.mobile-menu')
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden')
+    })
   },
 }
 </script>
