@@ -50,14 +50,13 @@
 
 
 <script>
-import { INPUTS } from '../constants/sign/signin'
 export default {
   name: 'SigninPage',
   layout: 'layout',
-  data() {
-    return {
-      inputs: INPUTS,
-    }
+  computed: {
+    inputs() {
+      return this.$store.state.signin.INPUTS
+    },
   },
 }
 </script>
