@@ -73,16 +73,16 @@
 </template>
 
 <script>
-import { SIGNUP } from '../constants/sign/signup'
-import { INPUTS } from '../constants/sign/signup'
 export default {
   name: 'AccountPage',
   layout: 'layout',
-  data() {
-    return {
-      notices: SIGNUP,
-      inputs: INPUTS,
-    }
+  computed: {
+    notices() {
+      return this.$store.state.signup.SIGNUP
+    },
+    inputs() {
+      return this.$store.state.signup.INPUTS
+    },
   },
 }
 </script>
