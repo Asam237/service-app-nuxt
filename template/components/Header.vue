@@ -48,7 +48,7 @@
               justify-center
             "
           >
-            <img :src="img_sign" class="w-7 h-7" alt="" />
+            <img :src="imgHome.icon" class="w-7 h-7" alt="" />
             <p
               class="
                 text-xs
@@ -69,7 +69,7 @@
         <ul class="flex justify-between items-center">
           <li>
             <nuxt-link to="/">
-              <img :src="imgHome.img" class="w-7 h-7" alt="" />
+              <img :src="imgHome.icon" class="w-7 h-7" alt="" />
             </nuxt-link>
           </li>
           <li

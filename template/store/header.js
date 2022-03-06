@@ -53,5 +53,8 @@ export const state = () => ({
     },
 
   ],
-  imgHome: require("../static/accueil.png")
+  imgHome: {
+    icon: require("../static/accueil.png"),
+    name: "home"
+  }
 })
