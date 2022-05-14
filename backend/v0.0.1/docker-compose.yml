@@ -1,0 +1,28 @@
+version "1"
+services:
+  backend:
+    build: .
+    depends_on:
+      - mongodb
+    ports:
+      - "5000:5000"
+    networks:
+      - service_app
+  mongodb:
+    image: mongo:5.0.2
+    environment:
+      - MONGO_URL=mongodb://mongodb:27017/badgein-api12uim
+      - JWT_SEC=123456
+      - SECRET=123456
+    ports:
+      - "27017:27017"
+    networks:
+      - service_app
+    volumes:
+      - db:/data/db
+volumes:
+  -db
+networks:
+  - service_app  
+
+
