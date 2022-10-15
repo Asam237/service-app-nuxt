@@ -3,12 +3,7 @@
     <div class="site__header-description py-3 px-4 md:px-0">
       <div class="container mx-auto md:px-18 lg:px-44">
         <div
-          class="
-            site__header-description__logo
-            flex
-            items-center
-            justify-between
-          "
+          class="site__header-description__logo flex items-center justify-between"
         >
           <h4
             class="text-xl h-10 sm:h-12 w-auto md:text-3xl font-bold"
@@ -21,42 +16,26 @@
           </h4>
           <div class="site__header-description__icons hidden md:flex">
             <ul
-              class="
-                flex
-                space-x-8
-                md:ml-10 md:flex md:items-center md:justify-center
-              "
+              class="flex space-x-8 md:ml-10 md:flex md:items-center md:justify-center"
             >
               <li v-for="(item, index) in headerIcons" :key="index">
                 <img :src="item.icon" class="h-5 w-5 mx-auto" alt="" />
                 <a
                   :href="item.link"
-                  @click="showModal"
                   style="font-family: 'Inter', sans-serif"
                   class="text-xs text-gray-900 font-medium"
+                  @click="showModal"
                   >{{ item.name }}</a
                 >
               </li>
             </ul>
           </div>
           <div
-            class="
-              site__header-description-sign
-              flex flex-col
-              md:hidden
-              items-center
-              justify-center
-            "
+            class="site__header-description-sign flex flex-col md:hidden items-center justify-center"
           >
             <img :src="imgHome.icon" class="w-7 h-7" alt="" />
             <p
-              class="
-                text-xs
-                md:text-base
-                font-medium
-                cursor-pointer
-                text-gray-900
-              "
+              class="text-xs md:text-base font-medium cursor-pointer text-gray-900"
             >
               Compte
             </p>
@@ -74,16 +53,8 @@
           </li>
           <li
             v-for="item in headerLinks"
-            class="
-              text-sm
-              md:text-base
-              font-medium
-              cursor-pointer
-              hidden
-              sm:flex
-              text-white
-            "
             :key="item.link"
+            class="text-sm md:text-base font-medium cursor-pointer hidden sm:flex text-white"
             @click="setID = item.link"
           >
             <a class="font-normal" :href="item.link">{{ item.name }}</a>

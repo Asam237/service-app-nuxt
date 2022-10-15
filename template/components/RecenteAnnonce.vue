@@ -3,20 +3,12 @@
     <div class="container mx-auto md:px-18 lg:px-32">
       <Title
         title="Annonces récentes"
-        styleText="md:text-center text-gray-900"
-        styleLine="hidden md:flex md:mx-auto bg-gray-900"
+        style-text="md:text-center text-gray-900"
+        style-line="hidden md:flex md:mx-auto bg-gray-900"
       />
 
       <div
-        class="
-          site__recenteannonce-content
-          grid
-          gap-4
-          sm:grid-cols-2
-          md:grid-cols-3
-          pt-6
-          md:pt-12
-        "
+        class="site__recenteannonce-content grid gap-4 sm:grid-cols-2 md:grid-cols-3 pt-6 md:pt-12"
       >
         <ul v-for="(item, index) in recentes" :key="index">
           <li class="text-left">

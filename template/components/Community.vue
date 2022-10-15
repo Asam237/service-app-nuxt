@@ -1,25 +1,16 @@
 <template>
-  <div class="site__community py-6 md:py-12 px-4 md:px-0 bg-red-600">
+  <div class="px-4 py-6 bg-red-600 site__community md:py-12 md:px-0">
     <div class="container mx-auto md:px-18 lg:px-32">
       <Title
         title="9 312 154 particuliers acheteurs et vendeurs : rejoignez la communauté !"
-        styleText="md:text-center text-white"
-        styleLine="hidden md:flex md:mx-auto bg-white"
+        style-text="md:text-center text-white"
+        style-line="hidden md:flex md:mx-auto bg-white"
       />
       <div class="relative px-8 text-center">
         <blockquote class="mt-8">
           <div class="relative text-lg font-medium text-white md:flex-grow">
             <svg
-              class="
-                absolute
-                top-0
-                left-0
-                h-8
-                w-8
-                -translate-x-3 -translate-y-2
-                transform
-                text-red-400
-              "
+              class="absolute top-0 left-0 w-8 h-8 text-red-400 -translate-x-3 -translate-y-2 transform"
               fill="currentColor"
               viewBox="0 0 32 32"
               aria-hidden="true"
@@ -41,18 +32,11 @@
           </footer>
         </blockquote>
         <div
-          class="
-            site__whyofferservice-btn
-            w-full
-            md:w-1/3
-            mx-auto
-            mt-5
-            md:mt-10
-          "
+          class="w-full mx-auto mt-5 site__whyofferservice-btn md:w-1/3 md:mt-10"
         >
           <Button
             title="Rejoindre la communauté"
-            myStyles="rounded-md border-2 border-white"
+            my-styles="rounded-md border-2 border-white"
           />
         </div>
       </div>

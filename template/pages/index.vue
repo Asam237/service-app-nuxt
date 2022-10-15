@@ -11,8 +11,8 @@
 import Community from '../components/Community.vue'
 import RecenteAnnonce from '../components/RecenteAnnonce.vue'
 export default {
-  components: { RecenteAnnonce, Community },
   name: 'IndexPage',
+  components: { RecenteAnnonce, Community },
   layout: 'layout',
 }
 </script>

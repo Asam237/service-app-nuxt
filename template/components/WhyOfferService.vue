@@ -3,34 +3,16 @@
     <div class="container mx-auto md:px-18 lg:px-32">
       <Title
         :title="title"
-        styleText="md:text-center text-gray-900"
-        styleLine="hidden md:flex md:mx-auto bg-gray-900"
+        style-text="md:text-center text-gray-900"
+        style-line="hidden md:flex md:mx-auto bg-gray-900"
       />
       <div
-        class="
-          site__whereofferservice-content
-          grid
-          gap-4
-          sm:grid-cols-2
-          md:grid-cols-3
-          pt-6
-          md:pt-12
-        "
+        class="site__whereofferservice-content grid gap-4 sm:grid-cols-2 md:grid-cols-3 pt-6 md:pt-12"
       >
         <ul v-for="(item, index) in content" :key="index">
           <li class="text-left">
             <div
-              class="
-                site__img
-                w-12
-                h-12
-                rounded-full
-                bg-red-600
-                flex
-                border-2
-                items-center
-                justify-center
-              "
+              class="site__img w-12 h-12 rounded-full bg-red-600 flex border-2 items-center justify-center"
             >
               <nuxt-img :src="item.img" class="rounded-full w-8 h-8" />
             </div>
@@ -38,17 +20,7 @@
               {{ item.title }}
             </h4>
             <p
-              class="
-                text-xs
-                md:text-sm
-                leading-4
-                line-clamp-2
-                md:line-clamp-3
-                w-full
-                pt-2
-                md:pt-3
-                text-gray-500
-              "
+              class="text-xs md:text-sm leading-4 line-clamp-2 md:line-clamp-3 w-full pt-2 md:pt-3 text-gray-500"
             >
               {{ item.description }}
             </p>
@@ -58,7 +30,7 @@
       <div
         class="site__whyofferservice-btn w-full md:w-1/3 mx-auto mt-5 md:mt-10"
       >
-        <Button :title="btn" myStyles="bg-red-600 rounded-md" />
+        <Button :title="btn" my-styles="bg-red-600 rounded-md" />
       </div>
     </div>
   </div>

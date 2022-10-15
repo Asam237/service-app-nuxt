@@ -1,24 +1,27 @@
 export const state = () => ({
   INPUTS: [
     {
-      name: "username"
+      name: 'username',
     },
     {
-      name: "password"
+      name: 'password',
     },
   ],
   username: '',
   password: '',
-  user: {}
+  user: {},
 })
 
 export const getters = {
   username: (state) => state.username,
-  password: (state) => state.password
+  password: (state) => state.password,
 }
 
 export const mutations = {
   LOGIN(state, payload) {
-    state.user = [{ username: payload.username, password: state.password }, ...state.user]
-  }
+    state.user = [
+      { username: payload.username, password: state.password },
+      ...state.user,
+    ]
+  },
 }

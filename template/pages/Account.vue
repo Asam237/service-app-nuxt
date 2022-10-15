@@ -3,14 +3,7 @@
     <div class="container mx-auto md:px-18 lg:px-44">
       <div class="site__account-blog flex flex-col md:flex-row">
         <div
-          class="
-            site__account-blogOne
-            w-full
-            md:w-1/2
-            border border-gray-300
-            bg-gray-100
-            rounded-md
-          "
+          class="site__account-blogOne w-full md:w-1/2 border border-gray-300 bg-gray-100 rounded-md"
         >
           <div class="flex flex-col p-2">
             <header class="site__account-header">
@@ -26,15 +19,15 @@
               <ul v-for="(item, index) in inputs" :key="index">
                 <li class="my-2 md:my-4">
                   <Input
-                    myStyles="bg-white h-10 border"
-                    :leadingData="item.name"
+                    my-styles="bg-white h-10 border"
+                    :leading-data="item.name"
                   />
                 </li>
               </ul>
               <div class="site__main-btn w-full mx-auto mt-5 md:mt-10">
                 <Button
                   title="S'inscrire"
-                  myStyles="bg-red-600 rounded-md h-10"
+                  my-styles="bg-red-600 rounded-md h-10"
                 />
               </div>
             </main>
@@ -49,17 +42,7 @@
                   {{ item.title }}
                 </h4>
                 <p
-                  class="
-                    text-xs
-                    md:text-sm
-                    leading-4
-                    line-clamp-2
-                    md:line-clamp-3
-                    w-full
-                    pt-2
-                    md:pt-3
-                    text-gray-500
-                  "
+                  class="text-xs md:text-sm leading-4 line-clamp-2 md:line-clamp-3 w-full pt-2 md:pt-3 text-gray-500"
                 >
                   {{ item.subTitle }}
                 </p>

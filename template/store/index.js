@@ -1,16 +1,16 @@
-import axios from "axios"
+import axios from 'axios'
 
 export const actions = {
   async postUser({ commit }, data) {
-    const resp = await axios.post("", data)
+    const resp = await axios.post('', data)
     if (resp) {
-      commit("singup/SIGNUP", data)
+      commit('singup/SIGNUP', data)
     }
   },
   async login({ commit }, data) {
-    const resp = await axios.post("", data)
+    const resp = await axios.post('', data)
     if (resp) {
-      commit("signin/LOGIN", resp.data)
+      commit('signin/LOGIN', resp.data)
     }
-  }
+  },
 }

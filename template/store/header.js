@@ -1,60 +1,58 @@
 export const state = () => ({
   headerIcons: [
     {
-      icon: require("../static/location.png"),
-      name: "Pres de chez vous",
-      link: "#"
+      icon: require('../static/location.png'),
+      name: 'Pres de chez vous',
+      link: '#',
     },
     {
-      icon: require("../static/account.png"),
-      name: "Identifiez-vous",
-      link: "/signin"
+      icon: require('../static/account.png'),
+      name: 'Identifiez-vous',
+      link: '/signin',
     },
     {
-      icon: require("../static/adduser.png"),
+      icon: require('../static/adduser.png'),
       name: "S'inscrire",
-      link: "/account"
+      link: '/account',
     },
     {
-      icon: require("../static/help.png"),
-      name: "Aide",
-      link: "#"
+      icon: require('../static/help.png'),
+      name: 'Aide',
+      link: '#',
     },
-
   ],
   headerLinks: [
     {
-      name: "Immobilier",
-      link: "#hello"
+      name: 'Immobilier',
+      link: '#hello',
     },
     {
-      name: "Auto-Moto",
-      link: "#one"
+      name: 'Auto-Moto',
+      link: '#one',
     },
     {
-      name: "Emploi",
-      link: "#two"
+      name: 'Emploi',
+      link: '#two',
     },
     {
-      name: "Animaux",
-      link: "#three"
+      name: 'Animaux',
+      link: '#three',
     },
     {
-      name: "Services",
-      link: "#four"
+      name: 'Services',
+      link: '#four',
     },
     {
-      name: "Affaire",
-      link: "#five"
+      name: 'Affaire',
+      link: '#five',
     },
     {
-      name: "Vacances",
-      link: "#six"
+      name: 'Vacances',
+      link: '#six',
     },
-
   ],
   imgHome: {
-    icon: require("../static/accueil.png"),
-    name: "home"
-  }
+    icon: require('../static/accueil.png'),
+    name: 'home',
+  },
 })
